@@ -1,4 +1,4 @@
-# Stochastic Fourier Neural Operators for Aeroacoustic Reduced-Order Modelling
+# Stochastic Fourier Neural Operators for Reduced-Order Modelling
 
 **MSc Financial Mathematics Dissertation · Department of Mathematics · Brunel University London · 2026**
 
@@ -299,12 +299,12 @@ When available, this section will contain:
 
 Until the archival DOI is available, the dissertation can be referenced as:
 
-> **Pokhrel, P. (2026).** *Stochastic Fourier Neural Operators for Aeroacoustic Reduced-Order Modelling*. MSc dissertation, Department of Mathematics, Brunel University London.
+> **Pokhrel, P. (2026).** *Stochastic Fourier Neural Operators for Reduced-Order Modelling*. MSc dissertation, Department of Mathematics, Brunel University London.
 
 ```bibtex
 @mastersthesis{pokhrel2026stochastic,
   author  = {Pokhrel, Pradip},
-  title   = {Stochastic Fourier Neural Operators for Aeroacoustic Reduced-Order Modelling},
+  title   = {Stochastic Fourier Neural Operators for Reduced-Order Modelling},
   school  = {Brunel University London},
   type    = {MSc Dissertation},
   year    = {2026}
