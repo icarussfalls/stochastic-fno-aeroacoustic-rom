@@ -43,26 +43,26 @@ That construction motivates a compact nonlinear ODE carrier whose effective coef
 
 ```mermaid
 flowchart LR
-    A[LES pressure data] --> B[SPOD]
-    B --> C[Retained complex mode z(t)]
+    A["LES pressure data"] --> B["SPOD"]
+    B --> C["Retained complex mode z(t)"]
 
-    D[Phillips convective-wave equation] --> E[Projected modal balance]
+    D["Phillips convective-wave equation"] --> E["Projected modal balance"]
     C --> E
 
-    E --> F[Hilbert-space pressure-velocity decomposition]
-    F --> G[Restricted nonlinear ODE carrier]
-    C --> H[Operator Inference]
+    E --> F["Hilbert-space pressure-velocity decomposition"]
+    F --> G["Restricted nonlinear ODE carrier"]
+    C --> H["Operator Inference"]
     H --> G
 
-    G --> I[Local ODE rollout]
-    C --> J[Finite resolved history]
+    G --> I["Local ODE rollout"]
+    C --> J["Finite resolved history"]
 
-    I --> K[Dual-branch stochastic FNO]
+    I --> K["Dual-branch stochastic FNO"]
     J --> K
 
-    K --> L[Autoregressive stochastic rollouts]
-    L --> M[Distributional and temporal validation]
-    L --> N[Inverse-SPOD pressure reconstruction]
+    K --> L["Autoregressive stochastic rollouts"]
+    L --> M["Distributional and temporal validation"]
+    L --> N["Inverse-SPOD pressure reconstruction"]
 ```
 
 In short:
