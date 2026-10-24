@@ -1,0 +1,9 @@
+first like clone the git repo
+git clone https://github.com/SpectralPOD/spod_matlab.git
+
+open matlab like this
+matlab -nodisplay -nodesktop
+
+we did interpolating as the dt is not uniform in the data
+
+save both temporal data(re and im) and also spatial modes
