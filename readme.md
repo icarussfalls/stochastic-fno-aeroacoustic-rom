@@ -24,7 +24,6 @@ The final spectral processing uses the complete sequence. The processed results 
 | [`spod_matlab/forsp7.m`](spod_matlab/forsp7.m) | Prepare pressure fluctuations, compute SPOD, and export continuous coefficients and reconstruction data. |
 | [`dissertation_code.ipynb`](dissertation_code.ipynb) | Fit the ODE; define and train the FNO; generate, process, export, and evaluate coefficient ensembles. |
 | [`spod_matlab/reconstruct_fno_all_samples.m`](spod_matlab/reconstruct_fno_all_samples.m) | Reconstruct the selected pressure contribution for the LES reference and every ensemble realization. |
-| [`find_spectrum.py`](find_spectrum.py) | Hann-window and Welch spectrum functions used by the notebook and plotting scripts. |
 | [`generate_metrics.py`](generate_metrics.py) | Generate ensemble diagnostic plots from the exported summary and distribution files. |
 | [`spod_matlab/`](spod_matlab/) | SPOD routines, examples, and project-specific MATLAB scripts. |
 
@@ -113,15 +112,15 @@ The training loop saves the best validation weights to `best_model.pt`. Before g
 
 Run the inference section, the offline spectral-processing cell, and the export cells. The default ensemble contains 30 realizations. Each uses 64 observed initialization samples followed by 82 generated blocks: **5312 samples in total, including 5248 generated samples**. The last incomplete block is omitted.
 
-The active export cells write:
+Use the following filenames for the ensemble exports:
 
 | Output | Contents |
 | --- | --- |
-| `fno_sindy_ensemble_summary1.txt` | Time, LES real and imaginary coefficients, ensemble means and standard deviations, and the deterministic ODE reference. |
-| `fno_sindy_ensemble_distributions1.txt` | Flattened real and imaginary samples from all processed realizations. |
+| `fno_sindy_ensemble_summary.txt` | Time, LES real and imaginary coefficients, ensemble means and standard deviations, and the deterministic ODE reference. |
+| `fno_sindy_ensemble_distributions.txt` | Flattened real and imaginary samples from all processed realizations. |
 | `fno_ensemble_coefficients.npy` | Complex array of shape `(30, 5312)` for pressure reconstruction. |
 
-Run the complex-array export after offline processing so that it uses the final `matrix_real` and `matrix_imag` arrays. Some plotting cells and `generate_metrics.py` read filenames without the `1` suffix. Update those inputs to the files from the same run before evaluating them.
+Run the complex-array export after offline processing so that it uses the final `matrix_real` and `matrix_imag` arrays. Use the filenames above consistently in the export cells, plotting cells, and `generate_metrics.py`, and evaluate files from the same run.
 
 ### 4. Reconstruct pressure in MATLAB
 
